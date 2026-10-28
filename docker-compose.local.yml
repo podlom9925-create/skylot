@@ -1,0 +1,10 @@
+# Локальний запуск без домену й HTTPS:
+#   docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build db app
+services:
+  app:
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      PUBLIC_URL: http://localhost:3000
+      TRUST_PROXY: "0"

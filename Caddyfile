@@ -1,0 +1,5 @@
+{$DOMAIN} {
+	encode gzip
+	# Автоматичний HTTPS (Let's Encrypt). Для DDoS-захисту поставте перед сервером Cloudflare.
+	reverse_proxy app:3000
+}
